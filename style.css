@@ -1,0 +1,97 @@
+/*komentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color:darkblue;/*teksti värv*/
+    background-color: darkgray;/*tausta värv*/
+}
+header{
+    padding: 5%;
+    background-color: darkgray;
+    border-left: 3px solid darkblue;
+    border-bottom: 3px dotted darkblue;
+    border-radius: 0 0 0 60px;
+    background-image: url('Vorst.png');
+    background-repeat: no-repeat;
+    background-posision: right;
+
+}
+footer{
+    padding: 5%;
+    background-color: darkgray;
+    border-left: 3px solid darkblue;
+    border-top: 3px dotted darkblue;
+    border-radius: 60px 0 0 0;
+}
+section#osa1, img{
+    padding: 5%;
+    border-left: 1px solid darkblue;
+    margin: 5px;
+    width: 25%;
+}
+
+section#osa2{
+    padding: 5%;
+    border-left: 1px solid green;
+    margin: 5px;
+    width: 15%;
+    border-radius: 20px 0 0 20px;
+    border-bottom: 3px dotted green;
+}
+
+section#osa3{
+    padding: 5%;
+    border-left: 1px red;
+    margin: 20px;
+    width: 30%;
+    background-color: beige;
+
+
+}
+section#osa4{
+    padding: 5%;
+    border-left: 1px solid orange;
+    margin: 5px;
+    width: 25%;
+    background-color: goldenrod;
+
+}
+section#osa5{
+    padding: 40%;
+    border-left: 1px solid purple;
+    margin: 5px;
+    width: 25%;
+    background-color: silver;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid darkblue;
+}
+/*navigeerimis menüü*/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+}
+ul li{
+    float: right;
+}
+nav ul li a{
+    display: block;
+    color: darkblue;
+    text-decoration: none;/*linko on alljoonita*/
+    text-align: center;/*teeksti joondamine on keskel*/
+    padding: 10px;
+    border-left: 3px solid red;
+    border-radius: 50%;
+}
+nav{
+    padding: 5%;
+    margin-bottom: 20px;
+}
+nav ul li a:hover{
+    background-color: red;
+}
+
