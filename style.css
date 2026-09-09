@@ -1,125 +1,120 @@
-/*komentaar*/
+/*kommentaar*/
 h1{
     font-variant: small-caps;
     font-size: xx-large;
-    color:darkblue;/*teksti värv*/
-    background-color: darkgray;/*tausta värv*/
+    color: blue; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+
 }
 header{
     padding: 5%;
-    background-color: darkgray;
-    border-left: 3px solid darkblue;
-    border-bottom: 3px dotted darkblue;
+    background-color: lightgray;
+    border-left: 3px solid blue;
+    border-right: 3px solid blue;
+    border-bottom: 3px solid blue;
     border-radius: 0 0 0 60px;
-    background-image: url('Vorst.png');
+    background-image: url("Star.png");
     background-repeat: no-repeat;
-    background-posision: right;
-
+    background-position: right;
 }
 footer{
     padding: 5%;
-    background-color: darkgray;
-    border-left: 3px solid darkblue;
-    border-top: 3px dotted darkblue;
-    border-radius: 60px 0 0 0;
+    background-color: lightgray;
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-radius: 50px 0 0 0;
 }
-section#osa1, img{
+section#osa1{
     padding: 5%;
-    border-left: 1px solid darkblue;
+    border: 3px solid crimson; /*dotted, dashed, double, outline, groove*/
     margin: 5px;
     width: 25%;
+    /*kirjuta iga section (osa3, osa4, osa5)
+    oma kujundusega mis kasutab erinevaid ääriseid,
+    värve, raam võiks olla ainult ühelt poolt*/
 }
-
 section#osa2{
     padding: 5%;
-    border-left: 1px solid green;
+    border: 3px solid blue;
     margin: 5px;
     width: 15%;
-    border-radius: 20px 0 0 20px;
-    border-bottom: 3px dotted green;
+    background-color: crimson;
+    border-left: 6px dashed darkgreen;
+    background-color:yellow;
 }
-
 section#osa3{
     padding: 5%;
-    border-left: 1px red;
-    margin: 20px;
-    width: 30%;
-    background-color: beige;
-
-
+    border: 3px solid green;
+    margin: 5px;
+    background-color:rebeccapurple;
 }
 section#osa4{
     padding: 5%;
-    border-left: 1px solid orange;
+    border: 3px solid purple;
     margin: 5px;
-    width: 25%;
-    background-color: goldenrod;
-
+    background-color:yellow;
 }
 section#osa5{
-    padding: 40%;
-    border-left: 1px solid purple;
-    margin: 5px;
-    width: 25%;
-    background-color: silver;
+    padding: 5%;
+    border: 3px solid red;
+    margin: 20px;
+    border-bottom: 5px double rebeccapurple;
+
 }
+
 img#erapilt{
     width: 100%;
     border-radius: 50%;
-    border: 5px solid darkblue;
-}
+    border: 10px solid blue;
 
-#pildigaleri,#video {
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
 }
 
 /*navigeerimis menüü*/
-nav ul{
+ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: darkblue;
+    margin:0;
+    padding:0;
+    background-color: lightgray;
 }
 ul li{
-    float: right;
+    float: left;
 }
 nav ul li a{
     display: block;
-    color: darkblue;
-    text-decoration: none;/*linko on alljoonita*/
-    text-align: center;/*teeksti joondamine on keskel*/
+    color: black;
+    text-decoration: none; /*link on alajooneta*/
+    text-align: center; /*teksti joondamine keskel*/
     padding: 10px;
-    border-left: 3px solid red;
-    border-radius: 50%;
+    border-left: 3px solid blue;
+    border-right: 3px solid blue;
+    border-radius: 20%;
 }
 nav{
     padding: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 nav ul li a:hover{
-    background-color: red;
+    background-color: lightcoral;
 }
+
 #suurkast{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-#pildigaleri {
-
-   border: 1px solid darkblue;
-}
-#video{
-    border: 1px solid darkblue;
-
-}
-#muusika{
-
-    border: 1px solid darkblue;
-}
-#kaart {
-    border: 1px solid darkblue;
+    gap: 10px;
 }
 
+section#pildigalerii{
+    border: 3px solid blue;
+}
+section#video{
+    border: 3px solid blue;
+    padding: 5%;
+}
+section#muusika{
+    border: 3px solid blue;
+    padding: 5%;
+}
+section#kaart{
+    border: 3px solid blue;
+    padding: 5%;
+}

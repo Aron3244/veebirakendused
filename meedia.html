@@ -1,20 +1,18 @@
-<!DOCTYPE html><!--deklaratsioon et kasutame html5-->
-<!--k-->
+<!DOCTYPE html><!--deklaratsioon, et kasutame html5-->
+<!--kommentaar-->
 <html lang="et">
 <head> <!--tehniline info-->
     <meta charset="UTF-8">
-    <title>Aron veebirakenduste aluste tööd
-    </title>
+    <title>Veebirakenduste tööd</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <!--veebilehe sisu, mis kasutaja näeb-->
-<!--päis-->
+<body>
 <header>
     <h1>
-        Aron veebirakenduste aluste tööd
+        Veebirakenduste tööd
     </h1>
 </header>
-<!--navigeerimis menüü-->
+<!--navigeerimismenüü-->
 <nav>
     <ul>
         <li>
@@ -34,48 +32,56 @@
         </li>
     </ul>
 </nav>
-
 <!--sisu-->
 <main>
-    <div id = "Suurkast">
-    <section id ="pildigaleri">
-<h2>Pildikaleri!</h2>
-        <div>
-        <img src="https://picsum.photos/200/300?random=1" alt="random pilt1" loading="lazy">
-        <img src="https://picsum.photos/200/300?random=2" alt="random pilt1" loading="lazy">
-        <img src="https://picsum.photos/v2/list?page=2&limit=100" alt="random pilt1" loading="lazy">
-        <img src="https://picsum.photos/200/300?grayscale" alt="random pilt1" loading="lazy">
-        <img src="https://picsum.photos/seed/picsum/200/300" alt="random pilt1" loading="lazy">
-        <img src="https://picsum.photos/id/237/200/300" alt="random pilt1" loading="lazy">
-        </div>
-        <!--loading="lazy"-- pilt laadiitakse vajadusel-->
-    </section>
+    <div id="suurkast">
+        <section id="pildigalerii">
+            <h2>Pildigalerii</h2>
+            <img src="https://picsum.photos/300/300?random=1" alt="random pilt1" loading="lazy">
+            <!--loading="lazy"-- pilt laaditakse vajadusel-->
+            <img src="https://picsum.photos/300/300?random=2" alt="random pilt2" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=3" alt="random pilt3" loading="lazy">
+            <br>
+            <img src="https://picsum.photos/300/300?random=4" alt="random pilt4" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=5" alt="random pilt5" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=6" alt="random pilt6" loading="lazy">
+        </section>
 
-    <section id ="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HD13eq_Pmp8?si=9BbuCuoDMG81hHHj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section id="video">
+            <h2>Video</h2>
+            <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/HD13eq_Pmp8?si=x4puLt8U0bAmZx5-"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </section>
 
-    </section>
+        <section id="muusika">
+            <h2>Muusika</h2>
+            <iframe
+                    style="border-radius: 12px;"
+                    src="https://open.spotify.com/embed/album/1RqFfqOVOzwhOwD1qmYJJ4?utm_source=generator&si=7956fc1f0d5e4a6e"
+                    width="100%"
+                    height="352"
+                    frameborder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+            </iframe>
+        </section>
 
-    <section id ="muusika">
-        <h2>Muusika</h2>
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2390070792&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-        </iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/griz" title="GRiZ" target="_blank" style="color: #cccccc; text-decoration: none;">GRiZ</a> · <a href="https://soundcloud.com/griz/sunshine" title="Sunshine" target="_blank" style="color: #cccccc; text-decoration: none;">Sunshine</a></div>
-
-    </section>
-
-    <section id ="kaart">
-        <h2>Kaart</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9658.438687328939!2d24.681801745829233!3d59.409111445906156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692959966907b01%3A0xa7d228a3d79d93bf!2sTHK!5e0!3m2!1set!2see!4v1788768771904!5m2!1set!2see"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </section>
+        <section id="kaart">
+            <h2>Kaart</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8121.1612782470165!2d24.695171846581015!3d59.41155199615394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f1bd8cb15b%3A0xc372ff05bb27e9f4!2sTallinna%20T%C3%B6%C3%B6stushariduskeskus!5e0!3m2!1set!2see!4v1788768741691!5m2!1set!2see" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
     </div>
+
 </main>
-<!--jalus-->
 <footer>
     <div>
         Aron Tuur
