@@ -1,0 +1,92 @@
+<!DOCTYPE html><!--deklaratsioon, et kasutame html5-->
+<!--kommentaar-->
+<html lang="et">
+<head> <!--tehniline info-->
+    <meta charset="UTF-8">
+    <title>Veebirakenduste tööd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>
+        Veebirakenduste tööd
+    </h1>
+</header>
+<!--navigeerimismenüü-->
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Avaleht</a>
+        </li>
+        <li>
+            <a href="kontakt.html">Kontakt</a>
+        </li>
+        <li>
+            <a href="tehtud.html">Tehtud tööd</a>
+        </li>
+        <li>
+            <a href="lingid.html">Kasulikud lingid</a>
+        </li>
+        <li>
+            <a href="meedia.html">Meedia</a>
+        </li>
+    </ul>
+</nav>
+<!--sisu-->
+<main>
+    <div id="suurkast">
+        <section id="pildigalerii">
+            <h2>Pildigalerii</h2>
+            <img src="https://picsum.photos/300/300?random=1" alt="random pilt1" loading="lazy">
+            <!--loading="lazy"-- pilt laaditakse vajadusel-->
+            <img src="https://picsum.photos/300/300?random=2" alt="random pilt2" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=3" alt="random pilt3" loading="lazy">
+            <br>
+            <img src="https://picsum.photos/300/300?random=4" alt="random pilt4" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=5" alt="random pilt5" loading="lazy">
+            <img src="https://picsum.photos/300/300?random=6" alt="random pilt6" loading="lazy">
+        </section>
+
+        <section id="video">
+            <h2>Video</h2>
+            <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/HD13eq_Pmp8?si=x4puLt8U0bAmZx5-"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="muusika">
+            <h2>Muusika</h2>
+            <iframe
+                    style="border-radius: 12px;"
+                    src="https://open.spotify.com/embed/album/1RqFfqOVOzwhOwD1qmYJJ4?utm_source=generator&si=7956fc1f0d5e4a6e"
+                    width="100%"
+                    height="352"
+                    frameborder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+            </iframe>
+        </section>
+
+        <section id="kaart">
+            <h2>Kaart</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8121.1612782470165!2d24.695171846581015!3d59.41155199615394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f1bd8cb15b%3A0xc372ff05bb27e9f4!2sTallinna%20T%C3%B6%C3%B6stushariduskeskus!5e0!3m2!1set!2see!4v1788768741691!5m2!1set!2see" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+    </div>
+
+</main>
+<footer>
+    <div>
+        Aron Tuur
+    </div>
+</footer>
+
+</body>
+</html>
