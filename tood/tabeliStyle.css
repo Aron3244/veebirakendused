@@ -1,31 +1,69 @@
-table#sinine{
-    border: 1px solid gold;
+table#crimson{
+    border: 1px solid crimson;
     width: 30%;
     height: 200px;
+}
+table#crimson td{
+    border: 1px solid crimson;
+    text-align: center;
+}
+table#sinine{
+    border: 1px solid blue;
+    width: 40%;
+    height: 200px;
+    border-collapse: collapse;
 }
 table#sinine td{
     border: 1px solid blue;
     text-align: center;
 }
-
-table#punane{
-    border: 1px solid red;
-    width: 50%;
-    height: 200px;
-    border-collapse: collapse;
-}
-table#punane td{
-    border: 1px solid red;
-    text-align: center;
-}
-
 table#roheline{
-    border: 1px solid greenyellow;
+    border: 1px solid green;
     width: 20%;
-    height: 150px;
+    height: 100px;
     border-collapse: collapse;
 }
 table#roheline td{
-    border: 1px solid greenyellow;
+    border: 1px solid green;
     text-align: center;
+}
+/*pseudoelementide kasutamine*/
+/*1.rida 1.lahter*/
+#crimson tr:nth-child(1) td:nth-child(1){
+    background-color: blue;
+}
+/*1.rida 2.lahter*/
+#crimson tr:nth-child(1) td:nth-child(2){
+    background-color: yellow;
+}
+/*2.rida*/
+#crimson tr:nth-child(2){
+    background-color: grey;
+}
+table#gold{
+    border: 1px solid gold;
+    width: 30%;
+    height: 200px;
+}
+table#gold td{
+    border: 1px solid gold;
+    text-align: center;
+}
+#gold tr:nth-child(1) td:nth-child(1){
+    background-color: blue;
+}
+#gold tr:nth-child(1) td:nth-child(2){
+    background-color: red;
+}
+#gold tr:nth-child(2){
+    background-color: green;
+}
+#gold tr:nth-child(3){
+    background-color: yellow;
+}
+#gold tr:nth-child(4){
+    background-color:purple;
+}
+#gold tr:nth-child(3) td:nth-child(3){
+    background-color: coral;
 }

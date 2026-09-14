@@ -1,8 +1,16 @@
+h1#lipud{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+}
 #eesti{
     width: 330px;
     height: 210px;
     border: 1px solid grey;
     border-spacing: 0;
+    position: absolute;
+    top: 0px;
+    left: 50%;
     /*collapse: collapse;*/
 }
 #eesti tr:nth-child(1){
@@ -14,3 +22,90 @@
 #eesti tr:nth-child(3){
     background-color: white;
 }
+#rootsi{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*collapse: collapse;*/
+    position: absolute;
+    top: 250px;
+    left: 50%;
+}
+
+#rootsi tr:nth-child(2){
+    background-color: gold;
+    height: 50px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1){
+    background-color: blue;
+    width: 100px;
+
+}
+
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3){
+    background-color: blue;
+    width: 175px;
+
+}
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2){
+    background-color: gold;
+
+
+}
+#saksamaa{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    position: absolute;
+    top: 500px;
+    left: 50%
+}
+    #saksamaa tr:nth-child(1){
+    background-color: black;
+}
+    #saksamaa tr:nth-child(2){
+        background-color: red;
+    }
+    #saksamaa tr:nth-child(3){
+        background-color: gold;
+    }
+
+table#sveits {
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border-collapse: collapse;
+    position: absolute;
+    top: 750px;
+    left: 55%;
+}
+
+/* Kõik lahtrid vaikimisi punaseks */
+#sveits td {
+    background-color: red;
+}
+
+/* Teisel real tee keskmine lahter (risti ülaosa) valgeks */
+#sveits tr:nth-child(2) td:nth-child(3) {
+    background-color: white;
+}
+
+/* Kolmandal real tee kolm keskmist lahtrit (risti põikipuu) valgeks */
+#sveits tr:nth-child(3) td:nth-child(2),
+#sveits tr:nth-child(3) td:nth-child(3),
+#sveits tr:nth-child(3) td:nth-child(4) {
+    background-color: white;
+}
+
+/* Neljandal real tee keskmine lahter (risti alaosa) valgeks */
+#sveits tr:nth-child(4) td:nth-child(3) {
+    background-color: white;
+}
+
+
