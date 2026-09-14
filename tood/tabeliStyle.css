@@ -67,3 +67,43 @@ table#gold td{
 #gold tr:nth-child(3) td:nth-child(3){
     background-color: coral;
 }
+
+/*iseseisev*/
+#iseseisev tr:nth-child(1) td:nth-child(1){
+    background-color: blue;
+}
+
+#iseseisev tr:nth-child(1) td:nth-child(2){
+    background-color: yellow;
+}
+/*2.rida*/
+#iseseisev tr:nth-child(2){
+    background-color: grey;
+}
+table#iseseisev{
+    border: 1px solid gold;
+    width: 30%;
+    height: 200px;
+}
+table#iseseisev td{
+    border: 1px solid gold;
+    text-align: center;
+}
+#iseseisev tr:nth-child(1) td:nth-child(1){
+    background-color: blue;
+}
+#iseseisev tr:nth-child(1) td:nth-child(2){
+    background-color: red;
+}
+#iseseisev tr:nth-child(2){
+    background-color: green;
+}
+#iseseisev tr:nth-child(3){
+    background-color: yellow;
+}
+#iseseisev tr:nth-child(4){
+    background-color:purple;
+}
+#iseseisev tr:nth-child(3) td:nth-child(3){
+    background-color: coral;
+}
