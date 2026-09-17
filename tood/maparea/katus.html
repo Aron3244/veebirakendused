@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutataud map area käsud</h1>
+<h2>palun kliki hiirega pildi erineva alale pildid</h2>
+<img src="maja.png" alt="ilus maja" usemap="#majakaart">
+<!-- kasutame mapi (kaart) -->
+<map name="majakaart">
+<!-- ring -circle coords = x, y, R -->
+    <area shape="circle" coords="213,111,50" href="aken.html" alt="aken">
+<!--ristkülik rect coords =x, y, x1, y2-->
+    <area shape="rect" coords="101,93,247,208" href="seinad.html" alt="seinad">
+    <!--mitu nurka polügoon -poly coords=x,y, x1, y1, x2, y2 -kolmnurk-->
+    <area shape="poly" coords="102,88,213,2,249,79" href="katus.html" alt="katus">
+    <area shape="circle" coords="115,25,50" href="päike.html" alt="päike">
+    <area shape="rect" coords="235,17,254,68" href="korsten.html" alt="korsten">
+    <area shape="rect" coords="15,114,50,216" href="puu.html" alt="puu">
+    <area shape="circle" coords="34,81,50" href="puu.html" alt="puu">
+    <area shape="rect" coords="117,145,153,212" href="uks.html" alt="uks">
+
+
+</map>
+<div id="selgitus">
+    Katus on ehitise ülemine osa, mis koosneb eri materjalidest ja konstruktsioonilistest elementidest ning toetub ehitise seintele ja tugedele. Katuse peamine ülesanne on kaitsta ehitist vihma, lume, päikse, temperatuuri ja tuule eest.[1] Katuse materjal ja kuju oleneb ehitise funktsioonist, materjalide kättesaadavusest, kohalikest ehitustavadest ja arhitektuurilisest disainist. Katuse ehitus on enamasti reguleeritud kohalike või riiklike eeskirjade ja normidega.[2]
+</div>
+
+
+
+</body>
+</html>
