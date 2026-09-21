@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Vormid ja nupud HTML keeles</title>
+</head>
+<body>
+<h1>Sportlase ankeet</h1>
+<form action="#">
+
+  <table border="1">
+    <tr>
+      <td>
+        <label for="nimi">Sisesta oma nimi:</label>
+      </td>
+      <td>
+        <input type="text" id="nimi">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>Vali sugu:</strong>
+      </td>
+      <td>
+        <input type="radio" name="sugu" id="naine">
+        <label for="naine">naine</label>
+        <br>
+        <input type="radio" name="sugu" id="mees">
+        <label for="mees">mees</label>
+        <br>
+        <input type="radio" name="sugu" id="muu">
+        <label for="muu">muu</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <fieldset>
+          <legend><strong>Spordialad</strong></legend>
+          <br>
+          <input type="checkbox" name="sportiala" id="jooksmine">
+          <label for="jooksmine">jooksmine</label>
+          <br>
+          <input type="checkbox" name="sportiala" id="ujumine">
+          <label for="ujumine">ujumine</label>
+          <br>
+          <input type="checkbox" name="sportiala" id="uisutamine">
+          <label for="uisutamine">uisutamine</label>
+          <br>
+          <input type="checkbox" name="sportiala" id="suusatamine">
+          <label for="suusatamine">suusatamine</label>
+          <br>
+          <input type="checkbox" name="sportiala" id="poks">
+          <label for="poks">poks</label>
+        </fieldset>
+        <br>
+        <!-- arvud number -->
+        <label for="tund">Mitu tundi nädalas sina treenid?</label>
+        <input type="number" min="0" max="24" step="1" value="6" id="tund">
+      </td>
+    </tr>
+
+    <!-- ripmenüü- dropdownlist-->
+    <tr>
+      <td colspan="2">
+        <label for="klubi">Mis klubi külastad?</label>
+        <select name="klubi" id="klubi">
+          <option value="vali">vali</option>
+          <option value="gym">GYM</option>
+          <option value="myFitness">myFitness</option>
+          <option value="gym24">GYM24</option>
+          <option value="kalvevspa">KalevSPA</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="varv">Mis värvi tossud sul on?</label>
+      </td>
+      <td>
+        <input type="color" id = "varv">
+      </td>
+    </tr>
+<tr>
+  <td>
+    <label for="kuupaev">Millal oli su viimane trenn?</label>
+  </td>
+  <td>
+    <input type="date" id = "kuupaev" min="2026-01-01" max="2026-12-31">
+  </td>
+</tr>
+    <tr>
+      Kasuta w3schools ja proovi ise input type=tel, file, psaaword, vali ise 5tk
+    </tr>
+
+
+  </table>
+
+
+</form>
+
+</body>
+</html>
