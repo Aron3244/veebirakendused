@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika Küsimustik</title>
+</head>
+<body>
+<h1>Muusika Küsimustik</h1>
+<form action="#">
+    <table border="1">
+<tr>
+    <td colspan="2">
+
+<labe>Mitu tundi paevas sa kuulad muusikat?</labe>
+        <input type="number" min="0" max="24" step="1" value="Muuika" id="tund" oninput="MuusikaKuulamisArv()">
+
+    </td>
+    <td>
+        <div id="vastus"></div>
+    </td>
+        <tr>
+        <td>
+            <strong>Vali muusik:</strong>
+        </td>
+
+
+        <td>
+            <input type="radio" name="Muusikud" id="Eeva Talsi">
+            <label for="Eeva Talsi">Eeva Talsi</label>
+            <br>
+            <input type="radio" name="Muusikud" id="Villu Tamme">
+            <label for="Villu Tamme">Villu Tamme</label>
+            <br>
+            <input type="radio" name="Muusikud" id="Tõnu Trubetsky">
+            <label for="Tõnu Trubetsky">Tõnu Trubetsky</label>
+            <br>
+            <input type="radio" name="Muusikud" id="muu" value="muu">
+            <label for="muu">muu</label>
+        </td>
+    </tr>
+
+
+        <tr>
+            <td>
+                <label for="Muusika">Mida arvad muusika kuulamsisest koolis?</label>
+            </td>
+            <td>
+                <input type="text" id="Muusika">
+            </td>
+        </tr>
+
+
+<tr>
+    <td colspan="2">
+        <fieldset>
+            <legend><strong>Kas sa kuulad raadiot?</strong></legend>
+            <br>
+            <input type="checkbox" name="Jah" id="Jah" value="Jah" >
+            <label for="Jah">Jah</label>
+            <br>
+            <input type="checkbox" name="Ei" id="Ei" value="Ei">
+            <label for="Ei">Jah</label>
+
+
+        </fieldset>
+</tr>
+
+        <tr>
+            <td>
+                <label for="Radio">Milliseid raadio jaamu oskad nimetada?</label>
+            </td>
+            <td>
+                <input type="text" id="Radio">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <fieldset>
+                    <legend><strong>Millist muusikat sa kõige rohkem kuulad?</strong></legend>
+                    <br>
+                    <input type="checkbox" name="Muusika" id="Rock" value="Rock" >
+                    <label for="Rock">Rock</label>
+                    <br>
+                    <input type="checkbox" name="Muusika" id="Classic" value="Classic" >
+                    <label for="Classic">Classic</label>
+                    <br>
+                    <input type="checkbox" name="Muusika" id="Pop" value="Pop" >
+                    <label for="Pop">Pop</label>
+                    <br>
+
+
+                </fieldset>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>
