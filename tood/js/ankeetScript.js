@@ -1,6 +1,6 @@
 //tekst kastist lugemine
 function nimiLugemine(){
-let nimi=document.getElementById("nimi");
+    let nimi=document.getElementById("nimi");
     let vastus=document.getElementById("vastus");
     //innerHTML -dünaamiliselt genireeri  teksti html'ina
     vastus.innerHTML="Tere hommikust, "+nimi.value;
@@ -9,7 +9,7 @@ let nimi=document.getElementById("nimi");
     return nimi.value;
 }
 //radionupude valikud
-function  suguValik(){
+function suguValik(){
     let vastus2=document.getElementById("vastus2");
     let naine=document.getElementById("naine");
     let mees=document.getElementById("mees");
@@ -18,18 +18,18 @@ function  suguValik(){
     //radio valikud
     let sugu="";
     if(naine.checked){
-         sugu=naine.value; }
-        else if(mees.checked){
-            sugu=mees.value;
-        } else if(muu.checked){
-            sugu=muu.value;
+        sugu=naine.value; }
+    else if(mees.checked){
+        sugu=mees.value;
+    } else if(muu.checked){
+        sugu=muu.value;
     }   else{
-             sugu="Palun vali sugu";
+        sugu="Palun vali sugu";
     }
-        vastus2.innerHTML="valitud sugu on " +sugu;
-        vastus2.style.color="darkblue";
+    vastus2.innerHTML="valitud sugu on " +sugu;
+    vastus2.style.color="darkblue";
 
-        return sugu;
+    return sugu;
 }
 //checkboxi'i valik
 function sportValik(){
@@ -53,9 +53,6 @@ function sportValik(){
     if (jooksmine.checked){
         sport+=jooksmine.value+ ", ";
     }
-    if (jooksmine.checked){
-        sport+=jooksmine.value+ ", ";
-    }
     if (uisutamine.checked){
         sport+=uisutamine.value+ " ";
     }
@@ -65,19 +62,43 @@ function sportValik(){
     vastus3.innerHTML=sport;
     return sport;
 }
+function klubiValik(){
+    let vastus5=document.getElementById("vastus5");
+    let klubi=document.getElementById("klubi");
+
+    if(klubi.selectedIndex!==0){
+        vastus5.innerHTML="Valitud spordiklub on " + klubi.value;
+        vastus5.style.color="red";
+    }
+    return klubi.value;
+}
+function kuupaevaValik(){
+    let vastus6=document.getElementById("vastus6");
+    let kuupaev=document.getElementById("kuupaev");
+    vastus6.innerHTML="Viimane külastus oli  " + kuupaev.value;
+    return kuupaev.value;
+}
 function tervitus(){
     let vastus4=document.getElementById("vastus4");
-    let nimi= nimiLugemine();
-    let sugu= suguValik();
-    let spordiala= sportValik();
+    let nimi=nimiLugemine();
+    let sugu=suguValik();
+    let spordiala=sportValik();
+    let klubi=klubiValik();
+    let kuupaev = kuupaevaValik();
 
-    vastus4.innerHTML = 'Sisestatud nimi on ' + nimi + '<br>' + 'Valitud sugu on ' + sugu + '<br>' + 'Valitud spordiala on: ' + spordiala;
-    vastus4.style.backgroundColor = "Yellow";
+    vastus4.innerHTML='Sisestatud nimi on '+nimi+'<br>'
+        +'Valitud sugu on '+sugu+'<br>'
+        +'Valitud spordialad: '+spordiala+'<br>'
+        +'Valitud klubi: '+klubi+'<br>'
+        +'Valitud kuupaev: '+kuupaev;
 
+    vastus4.style.backgroundColor="yellow";
 }
 function puhasta(){
-    vastus.innerHTML="";
-    vastus2.innerHTML="";
-    vastus3.innerHTML="";
-    vastus4.innerHTML="";
+    document.getElementById("vastus").innerHTML="";
+    document.getElementById("vastus2").innerHTML="";
+    document.getElementById("vastus3").innerHTML="";
+    document.getElementById("vastus4").innerHTML="";
+    document.getElementById("vastus5").innerHTML="";
+    document.getElementById("vastus6").innerHTML="";
 }
