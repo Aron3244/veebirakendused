@@ -20,7 +20,7 @@ function muusikValik(){
     if(eeva && eeva.checked){ muusik=eeva.value; }
     else if(villu && villu.checked){ muusik=villu.value; }
     else if(tonu && tonu.checked){ muusik=tonu.value; }
-    else if(toomas && toomas.checked){muusik=toomas.value; }
+    else if(toomas && toomas.checked){muusik=toomas.value;}
     else if(muu && muu.checked){ muusik=muu.value; }
 
     if(vastus2) {
@@ -48,9 +48,12 @@ function raadioValik(){
     let vastusRaadio=document.getElementById("vastusRaadio");
     let jah=document.getElementById("Jah");
     let ei=document.getElementById("Ei");
+    let pilt1=document.getElementById("pilt1");
 
     let raadio="Valik tegemata";
-    if(jah && jah.checked){ raadio=jah.value; }
+    if (jah && jah.checked){ raadio=jah.value;
+    pilt1.src="../pildid/s.png"}
+
     else if(ei && ei.checked){ raadio=ei.value; }
 
     if(vastusRaadio) {
