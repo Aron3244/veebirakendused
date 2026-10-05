@@ -1,0 +1,41 @@
+body{
+    font-family: Georgia;
+    background-color: #ff6a60;
+}
+
+img{
+    width: 182px;
+    border: 2pt solid green;
+    border-radius: 50%;
+}
+input[type=radio]{
+accent-color: #00f0ff;
+}
+input[type=button]{
+    width: 20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background: pink;
+    border-radius: 15px;
+    font-family: Georgia, serif;
+}
+div{
+    width: 20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background: pink;
+    border-radius: 15px;
+    position: absolute;
+    left: 200px;
+    top: 300px;
+}
+label{
+    font-weight: bold;
+
+    margin: 10px;
+}
+label:hover{
+    background-color: greenyellow;
+    border: 2pt solid green;
+    border-radius: 15px;
+}
