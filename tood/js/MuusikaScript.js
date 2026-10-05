@@ -5,8 +5,9 @@ function MuusikaKuulamisArv(){
         vastus.innerHTML=tund.value + " tundi";
         return tund.value;
     }
-    return "";
+    return "0";
 }
+
 function muusikValik(){
     let vastus2=document.getElementById("vastus2");
     let eeva=document.getElementById("eeva_talsi");
@@ -23,11 +24,16 @@ function muusikValik(){
     else if(muu && muu.checked){ muusik=muu.value; }
 
     if(vastus2) {
-        vastus2.innerHTML="valitud muusik on " + muusik;
-        vastus2.style.color="lightblue";
+        if(muusik !== "Palun vali muusik") {
+            vastus2.innerHTML="Valitud muusik on " + muusik;
+        } else {
+            vastus2.innerHTML=muusik;
+        }
+        vastus2.style.color="blue";
     }
     return muusik;
 }
+
 function arvamusLugemine(){
     let muusika=document.getElementById("Muusika");
     let vastusArvamus=document.getElementById("vastusArvamus");
@@ -37,6 +43,7 @@ function arvamusLugemine(){
     }
     return "";
 }
+
 function raadioValik(){
     let vastusRaadio=document.getElementById("vastusRaadio");
     let jah=document.getElementById("Jah");
@@ -47,10 +54,15 @@ function raadioValik(){
     else if(ei && ei.checked){ raadio=ei.value; }
 
     if(vastusRaadio) {
-        vastusRaadio.innerHTML="raadio kuulamine: " + raadio;
+        if(raadio !== "Valik tegemata") {
+            vastusRaadio.innerHTML="Raadio kuulamine: " + raadio;
+        } else {
+            vastusRaadio.innerHTML=raadio;
+        }
     }
     return raadio;
 }
+
 function jaamadLugemine(){
     let radio=document.getElementById("Radio");
     let vastusJaamad=document.getElementById("vastusJaamad");
@@ -60,23 +72,25 @@ function jaamadLugemine(){
     }
     return "";
 }
+
 function MuusikaStiiliValik(){
     let vastus3=document.getElementById("vastus3");
     let rock=document.getElementById("Rock");
     let classic=document.getElementById("Classic");
     let pop=document.getElementById("Pop");
 
-    let sport="";
-    if(rock && rock.checked){ sport+=rock.value + ", "; }
-    if(classic && classic.checked){ sport+=classic.value+ ", "; }
-    if(pop && pop.checked){ sport+=pop.value+ " "; }
+    let stiil="";
+    if(rock && rock.checked){ stiil+=rock.value + ", "; }
+    if(classic && classic.checked){ stiil+=classic.value+ ", "; }
+    if(pop && pop.checked){ stiil+=pop.value+ " "; }
 
-    if (sport==""){ sport="sa ei valinud muusika stiili"; }
-    else if(sport.endsWith(", ")) { sport = sport.slice(0, -2); }
+    if (stiil==""){ stiil="Sa ei valinud muusika stiili"; }
+    else if(stiil.endsWith(", ")) { stiil = stiil.slice(0, -2); }
 
-    if(vastus3) { vastus3.innerHTML=sport; }
-    return sport;
+    if(vastus3) { vastus3.innerHTML=stiil; }
+    return stiil;
 }
+
 function tervitus(){
     let vastus4=document.getElementById("koondvastus");
     if(!vastus4) return;
@@ -96,15 +110,26 @@ function tervitus(){
         +'Muusikastiilid: '+MuusikaStiil;
 
     vastus4.style.backgroundColor="green";
+    vastus4.style.color="white";
 }
+
 function puhasta(){
-    if(document.getElementById("vastus")) document.getElementById("vastus").innerHTML="";
+    let vorm = document.getElementById("kysimustik");
+    if(vorm) {
+        vorm.reset();
+    }
+
+
+    if(document.getElementById("vastus")) document.getElementById("vastus").innerHTML="0 tundi";
     if(document.getElementById("vastus2")) document.getElementById("vastus2").innerHTML="";
     if(document.getElementById("vastusArvamus")) document.getElementById("vastusArvamus").innerHTML="";
     if(document.getElementById("vastusRaadio")) document.getElementById("vastusRaadio").innerHTML="";
     if(document.getElementById("vastusJaamad")) document.getElementById("vastusJaamad").innerHTML="";
     if(document.getElementById("vastus3")) document.getElementById("vastus3").innerHTML="";
-    if(document.getElementById("koondvastus")) {
-        document.getElementById("koondvastus").innerHTML="";
+
+    let vastus4 = document.getElementById("koondvastus");
+    if(vastus4) {
+        vastus4.innerHTML="";
+        vastus4.style.backgroundColor="transparent";
     }
 }
