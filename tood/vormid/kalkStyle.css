@@ -1,14 +1,33 @@
+section#yld{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 section#osa1{
     border: 1pt solid black;
     border-radius: 10px;
     padding: 10px;
     width: 30%;
 }
+section#osa2{
+    border: 1pt solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
 img#pilt{
     border-radius: 50%;
     width: 270px;
     height: 300px;
 }
+img#pilt2{
+
+    width: 200px;
+    height: 300px;
+}
+
 select option{
     background-color: lightblue;
     color: blue;
