@@ -80,7 +80,10 @@ function raadioValik() {
         pilt1.alt = "HeaTuju";
         vastusRaadio.innerHTML = "Kuulad raadiot.";
         vastusRaadio.style.color = "green";
+
+        return "Jah";
     }
+
 
     else if (eiValik.checked)
     {
@@ -88,7 +91,9 @@ function raadioValik() {
         pilt1.alt = "HalbTuju";
         vastusRaadio.innerHTML = "Ei kuula raadiot.";
         vastusRaadio.style.color = "green";
+        return "Ei";
     }
+    return "Ei ole valitud";
 }
 
 function jaamadLugemine(){
@@ -98,7 +103,7 @@ function jaamadLugemine(){
         vastusJaamad.innerHTML=radio.value;
         return radio.value;
     }
-    return "";
+    return "Ei ole valitud";
 }
 
 function MuusikaStiiliValik(){
