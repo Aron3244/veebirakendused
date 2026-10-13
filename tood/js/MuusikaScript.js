@@ -8,29 +8,54 @@ function MuusikaKuulamisArv(){
     return "0";
 }
 
-function muusikValik(){
-    let vastus2=document.getElementById("vastus2");
-    let eeva=document.getElementById("eeva_talsi");
-    let villu=document.getElementById("villu_tamme");
-    let tonu=document.getElementById("tonu_trubetsky");
-    let toomas=document.getElementById("toomas_sularaha");
-    let muu=document.getElementById("muu");
+function muusikValik() {
+    let vastus2 = document.getElementById("vastus2");
+    let eeva = document.getElementById("eeva_talsi");
+    let villu = document.getElementById("villu_tamme");
+    let tonu = document.getElementById("tonu_trubetsky");
+    let toomas = document.getElementById("toomas_sularaha");
+    let muu = document.getElementById("muu");
 
-    let muusik="Palun vali muusik";
-    if(eeva && eeva.checked){ muusik=eeva.value; }
-    else if(villu && villu.checked){ muusik=villu.value; }
-    else if(tonu && tonu.checked){ muusik=tonu.value; }
-    else if(toomas && toomas.checked){muusik=toomas.value;}
-    else if(muu && muu.checked){ muusik=muu.value; }
+    let piltEeva = document.getElementById("piltEeva");
+    let piltVillu = document.getElementById("piltVillu");
+    let piltTonu = document.getElementById("piltTonu");
+    let piltToomas = document.getElementById("piltToomas");
+    let piltTyhi = document.getElementById("piltTyhi");
 
-    if(vastus2) {
-        if(muusik !== "Palun vali muusik") {
-            vastus2.innerHTML="Valitud muusik on " + muusik;
-        } else {
-            vastus2.innerHTML=muusik;
-        }
-        vastus2.style.color="blue";
+    piltEeva.style.display = "none";
+    piltVillu.style.display = "none";
+    piltTonu.style.display = "none";
+    piltToomas.style.display = "none";
+    piltTyhi.style.display = "none";
+
+    let muusik = "Palun vali muusik";
+
+    if (eeva && eeva.checked) {
+        muusik = eeva.value;
+        piltEeva.style.display = "block";
+    } else if (villu && villu.checked) {
+        muusik = villu.value;
+        piltVillu.style.display = "block";
+    } else if (tonu && tonu.checked) {
+        muusik = tonu.value;
+        piltTonu.style.display = "block";
+    } else if (toomas && toomas.checked) {
+        muusik = toomas.value;
+        piltToomas.style.display = "block";
+    } else if (muu && muu.checked) {
+        muusik = muu.value;
+        piltTyhi.style.display = "block";
     }
+
+    if (vastus2) {
+        if (muusik !== "Palun vali muusik") {
+            vastus2.innerHTML = "Valitud muusik on " + muusik;
+        } else {
+            vastus2.innerHTML = muusik;
+        }
+        vastus2.style.color = "blue";
+    }
+
     return muusik;
 }
 
@@ -44,26 +69,26 @@ function arvamusLugemine(){
     return "";
 }
 
-function raadioValik(){
-    let vastusRaadio=document.getElementById("vastusRaadio");
-    let jah=document.getElementById("Jah");
-    let ei=document.getElementById("Ei");
-    let pilt1=document.getElementById("pilt1");
+function raadioValik() {
+    let vastusRaadio = document.getElementById("vastusRaadio");
+    let pilt1 = document.getElementById("pilt1");
+    let jahValik = document.getElementById("Jah");
+    let eiValik = document.getElementById("Ei");
 
-    let raadio="Valik tegemata";
-    if (jah && jah.checked){ raadio=jah.value;
-    pilt1.src="../pildid/s.png"}
-
-    else if(ei && ei.checked){ raadio=ei.value; }
-
-    if(vastusRaadio) {
-        if(raadio !== "Valik tegemata") {
-            vastusRaadio.innerHTML="Raadio kuulamine: " + raadio;
-        } else {
-            vastusRaadio.innerHTML=raadio;
-        }
+    if (jahValik.checked) {
+        pilt1.src = "../pildid/s.jpg";
+        pilt1.alt = "HeaTuju";
+        vastusRaadio.innerHTML = "Kuulad raadiot.";
+        vastusRaadio.style.color = "green";
     }
-    return raadio;
+
+    else if (eiValik.checked)
+    {
+        pilt1.src = "../pildid/SadFace.png";
+        pilt1.alt = "HalbTuju";
+        vastusRaadio.innerHTML = "Ei kuula raadiot.";
+        vastusRaadio.style.color = "green";
+    }
 }
 
 function jaamadLugemine(){
@@ -136,3 +161,5 @@ function puhasta(){
         vastus4.style.backgroundColor="transparent";
     }
 }
+
+
