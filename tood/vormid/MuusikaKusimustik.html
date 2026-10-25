@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika Küsimustik</title>
+    <script src="../js/MuusikaScript.js"></script>
+</head>
+
+<body>
+<h1>Muusika Küsimustik</h1>
+<form action="#">
+
+    <table border="1">
+        <tr>
+            <td>Mitu tundi päevas sa kuulad muusikat?</td>
+            <td>
+                <input type="range" min="0" max="24" step="1" value="0" id="tund" oninput="MuusikaKuulamisArv()">
+            </td>
+            <td>
+                <div id="vastus">0 tundi</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Vali muusik:</td>
+            <td>
+                <input type="radio" name="muusik" id="eeva_talsi" value="Eeva Talsi" onclick="muusikValik()">
+                <label for="eeva_talsi">Eeva Talsi</label>
+                <br>
+                <input type="radio" name="muusik" id="villu_tamme" value="Villu Tamme" onclick="muusikValik()">
+                <label for="villu_tamme">Villu Tamme</label>
+                <br>
+                <input type="radio" name="muusik" id="tonu_trubetsky" value="Tõnu Trubetsky" onclick="muusikValik()">
+                <label for="tonu_trubetsky">Tõnu Trubetsky</label>
+                <br>
+                <input type="radio" name="muusik" id="toomas_sularaha" value="Toomas Sularaha" onclick="muusikValik()">
+                <label for="toomas_sularaha">Toomas Sularaha</label>
+                <br>
+                <input type="radio" name="muusik" id="muu" value="muu" onclick="muusikValik()">
+                <label for="muu">Muu</label>
+            </td>
+            <td width="250">
+                <div id="vastus2"></div>
+                <img src="../pildid/tyhi.png" id="pilt2" alt="Muusik" width="120" style="display: none;">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Muusika">Mida arvad muusika kuulamisest koolis?</label>
+            </td>
+            <td>
+                <input type="text" id="Muusika" oninput="arvamusLugemine()">
+            </td>
+            <td>
+                <div id="vastusArvamus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Kas sa kuulad raadiot?</td>
+            <td>
+                <input type="radio" name="raadio" id="Jah" value="Jah" onclick="raadioValik()">
+                <label for="Jah">Jah</label>
+                <br>
+                <input type="radio" name="raadio" id="Ei" value="Ei" onclick="raadioValik()">
+                <label for="Ei">Ei</label>
+            </td>
+            <td width="250">
+                <div id="vastusRaadio"></div>
+                <img src="../pildid/tyhi.png" id="pilt1" alt="Hea tuju" width="100" style="display: none;">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Radio">Milliseid raadiojaamu oskad nimetada?</label>
+            </td>
+            <td>
+                <input type="text" id="Radio" oninput="jaamadLugemine()">
+            </td>
+            <td>
+                <div id="vastusJaamad"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Millist muusikat sa kõige rohkem kuulad?</td>
+            <td>
+                <input type="checkbox" name="stiil" id="Rock" value="Rock" onchange="MuusikaStiiliValik()">
+                <label for="Rock">Rock</label>
+                <br>
+                <input type="checkbox" name="stiil" id="Classic" value="Classic" onchange="MuusikaStiiliValik()">
+                <label for="Classic">Classic</label>
+                <br>
+                <input type="checkbox" name="stiil" id="Pop" value="Pop" onchange="MuusikaStiiliValik()">
+                <label for="Pop">Pop</label>
+            </td>
+            <td>
+                <div id="vastus3"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
+            </td>
+            <td>
+                <input type="button" value="Näita andmed" onclick="tervitus()">
+            </td>
+            <td>
+                <div id="koondvastus"></div>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

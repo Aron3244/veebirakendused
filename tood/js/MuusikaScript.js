@@ -1,170 +1,151 @@
 function MuusikaKuulamisArv(){
     let tund=document.getElementById("tund");
     let vastus=document.getElementById("vastus");
-    if(tund) {
-        vastus.innerHTML=tund.value + " tundi";
-        return tund.value;
-    }
-    return "0";
+
+    vastus.innerHTML=tund.value + " tundi";
+
+    return tund.value;
 }
 
-function muusikValik() {
-    let vastus2 = document.getElementById("vastus2");
-    let eeva = document.getElementById("eeva_talsi");
-    let villu = document.getElementById("villu_tamme");
-    let tonu = document.getElementById("tonu_trubetsky");
-    let toomas = document.getElementById("toomas_sularaha");
-    let muu = document.getElementById("muu");
+function muusikValik(){
+    let vastus2=document.getElementById("vastus2");
+    let eeva=document.getElementById("eeva_talsi");
+    let villu=document.getElementById("villu_tamme");
+    let tonu=document.getElementById("tonu_trubetsky");
+    let toomas=document.getElementById("toomas_sularaha");
+    let muu=document.getElementById("muu");
+    let pilt2=document.getElementById("pilt2");
 
-    let piltEeva = document.getElementById("piltEeva");
-    let piltVillu = document.getElementById("piltVillu");
-    let piltTonu = document.getElementById("piltTonu");
-    let piltToomas = document.getElementById("piltToomas");
-    let piltTyhi = document.getElementById("piltTyhi");
-
-    piltEeva.style.display = "none";
-    piltVillu.style.display = "none";
-    piltTonu.style.display = "none";
-    piltToomas.style.display = "none";
-    piltTyhi.style.display = "none";
-
-    let muusik = "Palun vali muusik";
-
-    if (eeva && eeva.checked) {
-        muusik = eeva.value;
-        piltEeva.style.display = "block";
-    } else if (villu && villu.checked) {
-        muusik = villu.value;
-        piltVillu.style.display = "block";
-    } else if (tonu && tonu.checked) {
-        muusik = tonu.value;
-        piltTonu.style.display = "block";
-    } else if (toomas && toomas.checked) {
-        muusik = toomas.value;
-        piltToomas.style.display = "block";
-    } else if (muu && muu.checked) {
-        muusik = muu.value;
-        piltTyhi.style.display = "block";
+    let muusik="";
+    if(eeva.checked){
+        muusik=eeva.value;
+        pilt2.src="../pildid/EevaTalsi.JPG";
+        pilt2.style.display="inline";
     }
-
-    if (vastus2) {
-        if (muusik !== "Palun vali muusik") {
-            vastus2.innerHTML = "Valitud muusik on " + muusik;
-        } else {
-            vastus2.innerHTML = muusik;
-        }
-        vastus2.style.color = "blue";
+    else if(villu.checked){
+        muusik=villu.value;
+        pilt2.src="../pildid/VilluTamme.jpg";
+        pilt2.style.display="inline";
     }
+    else if(tonu.checked){
+        muusik=tonu.value;
+        pilt2.src="../pildid/TonuTrubetsky.jpg";
+        pilt2.style.display="inline";
+    }
+    else if(toomas.checked){
+        muusik=toomas.value;
+        pilt2.src="../pildid/ToomasSularaha.jpg";
+        pilt2.style.display="inline";
+    }
+    else if(muu.checked){
+        muusik=muu.value;
+        pilt2.style.display="none";
+    }
+    else{
+        muusik="Palun vali muusik";
+        pilt2.style.display="none";
+    }
+    vastus2.innerHTML="Valitud muusik on " + muusik;
 
     return muusik;
 }
 
 function arvamusLugemine(){
-    let muusika=document.getElementById("Muusika");
+    let Muusika=document.getElementById("Muusika");
     let vastusArvamus=document.getElementById("vastusArvamus");
-    if(muusika && vastusArvamus) {
-        vastusArvamus.innerHTML=muusika.value;
-        return muusika.value;
-    }
-    return "";
+
+    vastusArvamus.innerHTML="Sinu arvamus: " + Muusika.value;
+
+    return Muusika.value;
 }
 
-function raadioValik() {
-    let vastusRaadio = document.getElementById("vastusRaadio");
-    let pilt1 = document.getElementById("pilt1");
-    let jahValik = document.getElementById("Jah");
-    let eiValik = document.getElementById("Ei");
+function raadioValik(){
+    let vastusRaadio=document.getElementById("vastusRaadio");
+    let jah=document.getElementById("Jah");
+    let ei=document.getElementById("Ei");
+    let pilt1=document.getElementById("pilt1");
 
-    if (jahValik.checked) {
-        pilt1.src = "../pildid/s.jpg";
-        pilt1.alt = "HeaTuju";
-        vastusRaadio.innerHTML = "Kuulad raadiot.";
-        vastusRaadio.style.color = "green";
-
-        return "Jah";
+    let raadio="";
+    if(jah.checked){
+        raadio=jah.value;
+        pilt1.src="../pildid/HeaTuju.jpg";
+        pilt1.style.display="inline";
     }
-
-
-    else if (eiValik.checked)
-    {
-        pilt1.src = "../pildid/SadFace.png";
-        pilt1.alt = "HalbTuju";
-        vastusRaadio.innerHTML = "Ei kuula raadiot.";
-        vastusRaadio.style.color = "green";
-        return "Ei";
+    else if(ei.checked){
+        raadio=ei.value;
+        pilt1.src="../pildid/SadFace.png";
+        pilt1.style.display="inline";
     }
-    return "Ei ole valitud";
+    else{
+        raadio="Palun vali vastus";
+        pilt1.style.display="none";
+    }
+    vastusRaadio.innerHTML="Raadio kuulamine: " + raadio;
+
+    return raadio;
 }
 
 function jaamadLugemine(){
-    let radio=document.getElementById("Radio");
+    let Radio=document.getElementById("Radio");
     let vastusJaamad=document.getElementById("vastusJaamad");
-    if(radio && vastusJaamad) {
-        vastusJaamad.innerHTML=radio.value;
-        return radio.value;
-    }
-    return "Ei ole valitud";
+
+    vastusJaamad.innerHTML="Sinu raadiojaamad: " + Radio.value;
+
+    return Radio.value;
 }
 
 function MuusikaStiiliValik(){
     let vastus3=document.getElementById("vastus3");
-    let rock=document.getElementById("Rock");
-    let classic=document.getElementById("Classic");
-    let pop=document.getElementById("Pop");
+    let Rock=document.getElementById("Rock");
+    let Classic=document.getElementById("Classic");
+    let Pop=document.getElementById("Pop");
 
     let stiil="";
-    if(rock && rock.checked){ stiil+=rock.value + ", "; }
-    if(classic && classic.checked){ stiil+=classic.value+ ", "; }
-    if(pop && pop.checked){ stiil+=pop.value+ " "; }
+    if(Rock.checked){
+        stiil+=Rock.value + ", ";
+    }
+    if(Classic.checked){
+        stiil+=Classic.value + ", ";
+    }
+    if(Pop.checked){
+        stiil+=Pop.value + ", ";
+    }
+    if(stiil==""){
+        stiil="sa ei kuula muusikat";
+    }
+    vastus3.innerHTML=stiil;
 
-    if (stiil==""){ stiil="Sa ei valinud muusika stiili"; }
-    else if(stiil.endsWith(", ")) { stiil = stiil.slice(0, -2); }
-
-    if(vastus3) { vastus3.innerHTML=stiil; }
     return stiil;
 }
 
 function tervitus(){
-    let vastus4=document.getElementById("koondvastus");
-    if(!vastus4) return;
-
+    let koondvastus=document.getElementById("koondvastus");
     let tund=MuusikaKuulamisArv();
     let muusik=muusikValik();
     let arvamus=arvamusLugemine();
     let raadio=raadioValik();
     let jaamad=jaamadLugemine();
-    let MuusikaStiil=MuusikaStiiliValik();
+    let stiil=MuusikaStiiliValik();
 
-    vastus4.innerHTML='Tunde päevas: '+tund+'<br>'
-        +'Lemmikmuusik: '+muusik+'<br>'
-        +'Arvamus koolis: '+arvamus+'<br>'
-        +'Kuulab raadiot: '+raadio+'<br>'
+    koondvastus.innerHTML='Kuulad muusikat '+tund+' tundi päevas'+'<br>'
+        +'Valitud muusik: '+muusik+'<br>'
+        +'Arvamus: '+arvamus+'<br>'
+        +'Raadio kuulamine: '+raadio+'<br>'
         +'Raadiojaamad: '+jaamad+'<br>'
-        +'Muusikastiilid: '+MuusikaStiil;
+        +'Valitud stiilid: '+stiil;
 
-    vastus4.style.backgroundColor="green";
-    vastus4.style.color="white";
+    koondvastus.style.backgroundColor="yellow";
 }
 
 function puhasta(){
-    let vorm = document.getElementById("kysimustik");
-    if(vorm) {
-        vorm.reset();
-    }
-
-
-    if(document.getElementById("vastus")) document.getElementById("vastus").innerHTML="0 tundi";
-    if(document.getElementById("vastus2")) document.getElementById("vastus2").innerHTML="";
-    if(document.getElementById("vastusArvamus")) document.getElementById("vastusArvamus").innerHTML="";
-    if(document.getElementById("vastusRaadio")) document.getElementById("vastusRaadio").innerHTML="";
-    if(document.getElementById("vastusJaamad")) document.getElementById("vastusJaamad").innerHTML="";
-    if(document.getElementById("vastus3")) document.getElementById("vastus3").innerHTML="";
-
-    let vastus4 = document.getElementById("koondvastus");
-    if(vastus4) {
-        vastus4.innerHTML="";
-        vastus4.style.backgroundColor="transparent";
-    }
+    document.getElementById("vastus").innerHTML="0 tundi";
+    document.getElementById("vastus2").innerHTML="";
+    document.getElementById("vastusArvamus").innerHTML="";
+    document.getElementById("vastusRaadio").innerHTML="";
+    document.getElementById("vastusJaamad").innerHTML="";
+    document.getElementById("vastus3").innerHTML="";
+    document.getElementById("koondvastus").innerHTML="";
+    document.getElementById("koondvastus").style.backgroundColor="";
+    document.getElementById("pilt1").style.display="none";
+    document.getElementById("pilt2").style.display="none";
 }
-
-
