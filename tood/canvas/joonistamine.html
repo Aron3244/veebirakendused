@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamiserakendus canvas-ga</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="joonisScript.js"></script>
+</head>
+<body>
+<h1>Joonistamiserakendus canvas-ga</h1>
+<input type="button" id="Puhasta" onclick="puhasta()" value="Puhasta">
+<canvas id ="tahvel" width="300" height="400" > </canvas>
+<br>
+<input type="button" value="Joon" onclick="sirgeJoon()">
+<br>
+<input type="button" value="Kolmnurk" onclick="kolmnurk()">
+<br>
+<input type="button" value="Ristkülik" onclick="ristkylik()">
+<label for="laius">Laius</label>
+<input type="number" min="1" max="300" step="10" id="laius" onchange="ristkylik()">
+<label for="korgus">Kõrgus</label>
+<input type="number" min="1" max="300" step="10" id="korgus" onchange="ristkylik()">
+<br>
+<input type="button" value="ring" onclick="ring()">
+<input type="number" min="1" max="150" id="raadius" onchange="ring()">
+<input type="color" id="varv" onchange="ring()">
+<br>
+<input type="button" value="pea" onclick="nagu()">
+<input type="number" min="1" max="150"  id="raadius2" step="100" onchange="nagu()">
+<br>
+<input type="button" value="vasakSilm" onclick="silm1()">
+<input type="number" min="1" max="150"  id="raadius3" step="1" onchange="silm1()">
+
+
+
+</body>
+</html>
