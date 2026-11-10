@@ -74,12 +74,12 @@ function ring(){
 
 function nagu(){
     const tahvel=document.getElementById("tahvel");
-    const r=document.getElementById("raadius2");
 
     if(tahvel.getContext){
         let t= tahvel.getContext("2d");
+        t.beginPath();
         t.fillStyle="yellow";
-        t.arc(140,170,r.value,0, 2*Math.PI, true);// alguspunkt - x, y, raadius 2x180kraadi
+        t.arc(140,170,50,0, 2*Math.PI, true);// alguspunkt - x, y, raadius 2x180kraadi
         t.fill();
 
     }
@@ -87,14 +87,99 @@ function nagu(){
 
 function silm1(){
     const tahvel=document.getElementById("tahvel");
-    const r=document.getElementById("raadius3");
+
 
     if(tahvel.getContext){
         let t= tahvel.getContext("2d");
-        t.fillStyle="black";
-        t.arc(140,170,r.value,0, 2*Math.PI, true);// alguspunkt - x, y, raadius 2x180kraadi
+        t.beginPath();
+        t.fillStyle = "black";
+        t.arc(120, 155, 8,0, 2*Math.PI, true);// alguspunkt - x, y, raadius 2x180kraadi
         t.fill();
 
     }
 }
+function silm2(){
+    const tahvel=document.getElementById("tahvel");
+
+
+    if(tahvel.getContext){
+        let t= tahvel.getContext("2d");
+        t.beginPath();
+        t.fillStyle = "black";
+        t.arc(160, 155, 8,0, 2*Math.PI, true);// alguspunkt - x, y, raadius 2x180kraadi
+        t.fill();
+
+    }
+}
+function suu(){
+    //määrame tahvli
+    const tahvel=document.getElementById("tahvel");
+
+    if(tahvel.getContext){
+        let t= tahvel.getContext("2d");
+        t.beginPath();
+        t.strokeStyle="black";
+        t.lineWidth = 2;
+        t.moveTo(110, 195);
+        t.lineTo(170, 195);
+        t.stroke();
+    }
+}
+
+
+
+
+    function nina()
+    {
+        const tahvel=document.getElementById("tahvel");
+
+        if(tahvel.getContext){
+            let t= tahvel.getContext("2d");
+            t.beginPath();
+            t.fillStyle="black";
+            t.fillRect(135, 165, 10, 15);// alguspunkt - x, y, laius, kõrgus
+        }
+    }
+function kõrv1()
+{
+    const tahvel=document.getElementById("tahvel");
+
+    if(tahvel.getContext){
+        let t= tahvel.getContext("2d");
+        t.beginPath();
+        t.fillStyle="black";
+        t.fillRect(75, 155, 15, 30);// alguspunkt - x, y, laius, kõrgus
+    }
+}
+function kõrv2()
+{
+    const tahvel=document.getElementById("tahvel");
+
+    if(tahvel.getContext){
+        let t= tahvel.getContext("2d");
+        t.beginPath();
+        t.fillStyle="black";
+        t.fillRect(190, 155, 15, 30);// alguspunkt - x, y, laius, kõrgus
+    }
+}
+
+
+//pilt failist // drawImage()
+function pilt(){
+    const tahvel=document.getElementById("tahvel");
+    if(tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        const fail =new Image();
+        fail.src="https://img.magnific.com/free-psd/cute-3d-smiling-happy-face-emoji_84443-82699.jpg?semt=ais_hybrid&w=740&q=80";
+        fail.onload=()=>{
+            t. drawImage(fail, 50, 50, 100, 100);
+        }
+    }
+}
+
+function smile(){
+    puhasta();
+    silm1();
+}
+
 
