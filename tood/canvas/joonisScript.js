@@ -72,7 +72,7 @@ function ring(){
     }
 }
 
-function nagu(){
+function pea(){
     const tahvel=document.getElementById("tahvel");
 
     if(tahvel.getContext){
@@ -112,7 +112,6 @@ function silm2(){
     }
 }
 function suu(){
-    //määrame tahvli
     const tahvel=document.getElementById("tahvel");
 
     if(tahvel.getContext){
@@ -140,7 +139,7 @@ function suu(){
             t.fillRect(135, 165, 10, 15);// alguspunkt - x, y, laius, kõrgus
         }
     }
-function kõrv1()
+function korv1()
 {
     const tahvel=document.getElementById("tahvel");
 
@@ -151,7 +150,7 @@ function kõrv1()
         t.fillRect(75, 155, 15, 30);// alguspunkt - x, y, laius, kõrgus
     }
 }
-function kõrv2()
+function korv2()
 {
     const tahvel=document.getElementById("tahvel");
 
@@ -177,9 +176,14 @@ function pilt(){
     }
 }
 
-function smile(){
-    puhasta();
+function nagu(){
+    pea();
+    suu();
     silm1();
+    silm2();
+    nina();
+    korv1();
+    korv2();
 }
 
 
