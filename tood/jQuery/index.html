@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+          integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+          crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function()
+    {
+      //paremale nuppu vajutamine
+      $('#paremale').click(function () {
+        $('#tekstikast').animate({'left':'200px'},1000)
+        $(this).hide() ;
+        $('#vasakule').show();
+      });
+//vask nupp
+      $('#vasakule').click(function () {
+        $('#tekstikast').animate({'left':'0px'},1000)
+        $(this).hide() ;
+        $('#paremale').show();
+      });
+    });
+    //värvib teksti punaseks
+    function tekstPunaseks()
+    {
+      $('#tekstikast').css('color', 'red');
+    }
+
+    function tekstMustaks()
+    {
+      $('#tekstikast').css('color', 'black');
+    }
+
+    function koordiLugemine(event, ui)
+    {
+      let koht=ui.offset;
+      $('#koordinadid').html('x:'+koht.left+ ' || y:' +koht.top);
+    }
+
+    function leheStart()
+    {
+      $('#tekstikast').mouseenter(tekstPunaseks);
+      $('#tekstikast').mouseleave(tekstMustaks);
+      $('#tekstikast').draggable();
+      $('#tekstikast').bind("drag", koordiLugemine);
+      $('#pilt').draggable();
+      $('#pilt').bind("drag", koordiLugemine);
+    }
+
+
+  </script>
+
+</head>
+<body onload="leheStart()">
+<header>
+  <h1>jQuery kasutamine</h1>
+</header>
+<main>
+  <section>
+    <h2>jQuery CDN</h2>
+    <div id="tekstikast">
+      jQuery - see on raamistik
+      <br>
+      CDN - raamistiku allalaadimiseviis välisserverists
+      <br>
+      Ametlik CDN asub https://releases.jquery.com/
+    </div>
+    <input type="button" value="paremale"  id="paremale">
+    <input type="button" value="vasakule" id="vasakule">
+    <input type="button" value="peida tekst" onclick="$('#tekstikast').hide(2000)">
+    <input type="button" value="kuva tekst" onclick="$('#tekstikast').show(2000, alert('Kohe kuvab tekst'))">
+  </section>
+  <div id="koordinadid"></div>
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/012/407/172/small/rainbow-icon-isolated-on-transparent-background-vector.jpg" alt="" id="pilt">
+</main>
+
+</body>
+</html>

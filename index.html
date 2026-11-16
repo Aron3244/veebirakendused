@@ -4,6 +4,60 @@
 <head> <!--tehniline info-->
     <meta charset="UTF-8">
     <title>Veebirakenduste tööd</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function()
+        {
+            //paremale nuppu vajutamine
+            $('#paremale').click(function () {
+                $('#osa1').animate({'left':'200px'},1000)
+                $(this).hide() ;
+                $('#vasakule').show();
+            });
+//vask nupp
+            $('#vasakule').click(function () {
+                $('#osa1').animate({'left':'0px'},1000)
+                $(this).hide() ;
+                $('#paremale').show();
+            });
+        });
+        //värvib teksti punaseks
+        function tekstPunaseks()
+        {
+            $('#os1').css('color', 'red');
+        }
+
+        function tekstMustaks()
+        {
+            $('#os1').css('color', 'black');
+        }
+
+        function koordiLugemine(event, ui)
+        {
+            let koht=ui.offset;
+            $('#koordinadid').html('x:'+koht.left+ ' || y:' +koht.top);
+        }
+
+        function leheStart()
+        {
+            $('#os1').mouseenter(tekstPunaseks);
+            $('#os1').mouseleave(tekstMustaks);
+            $('#os1').draggable();
+            $('#os1').bind("drag", koordiLugemine);
+            $('#pilt').draggable();
+            $('#pilt').bind("drag", koordiLugemine);
+        }
+
+
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <script src="tood/js/kpjakellaajaKuvamine.js"></script>
 </head>
@@ -36,11 +90,19 @@
     </ul>
 </nav>
 <main>
+    <link rel="stylesheet" href="queryStyle.css">
     <section id="osa1">
         <h2>Tere tulemast!</h2>
         <p>See on veebirakenduste tunnis
             käsitsi kirjutatud leht</p>
         <p>Palun kasuta navigeerimismenüüd, et leida info!</p>
+        </div>
+        <input type="button" value="paremale"  id="paremale">
+        <input type="button" value="vasakule" id="vasakule">
+        <input type="button" value="peida tekst" onclick="$('#osa1').hide(2000)">
+        <input type="button" value="kuva tekst" onclick="$('#osa1').show(2000, alert('Kohe kuvab tekst'))">
+
+        </div>
     </section>
 
     <section id="osa2">

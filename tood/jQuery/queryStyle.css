@@ -1,0 +1,18 @@
+#tekstikast{
+    position: relative;
+    left: 0;
+    width: 200px;
+    border: solid 1px blue;
+    background-color: violet;
+}
+h2{
+    position: relative;
+    left: 0;
+    width: 200px;
+}
+img{
+    width: 200px;
+    position: relative;
+    left: 0;
+}
+

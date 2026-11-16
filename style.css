@@ -25,14 +25,13 @@ footer{
     border-radius: 50px 0 0 0;
 }
 section#osa1{
-    padding: 5%;
-    border: 3px solid crimson; /*dotted, dashed, double, outline, groove*/
-    margin: 5px;
-    width: 25%;
-    /*kirjuta iga section (osa3, osa4, osa5)
-    oma kujundusega mis kasutab erinevaid ääriseid,
-    värve, raam võiks olla ainult ühelt poolt*/
-}
+        position: relative;
+        left: 0;
+        width: 200px;
+        border: solid 1px blue;
+        background-color: violet;
+    }
+
 section#osa2{
     padding: 5%;
     border: 3px solid blue;
