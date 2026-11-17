@@ -4,11 +4,67 @@
     <meta charset="UTF-8">
     <title>Muusika Küsimustik</title>
     <script src="../js/MuusikaScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
+<script> $(function(){
+    // peidame vead
+    $('.viga').hide();
+
+    // puhastusnupp
+    $('#puhasta').click(function(){
+        $('#muusikaVorm')[0].reset();
+        $('.viga').hide();
+    });
+
+    // valideerimine, kui vorm on saadetud
+    $('#muusikaVorm').submit(function(event){
+        let valid = true;
+
+        // 1. Checkbox
+        if($('input[name="muusik"]:checked').length === 0){
+            $('#viga1').show();
+            valid = false;
+        } else { $('#viga1').hide(); }
+
+        // 2. Number (0–24)
+        let tunnid = $('#tund').val();
+        if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 24){
+            $('#viga3').show();
+            valid = false;
+        } else { $('#viga3').hide(); }
+
+        // 3. Radio
+        if($('input[name="radio"]:checked').length === 0){
+            $('#viga4').show();
+            valid = false;
+        } else { $('#viga4').hide(); }
+
+        // 5. Text (ainult tähed)
+        let tekst = $('#kysi5').val().trim();
+        if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+            $('#viga5').show();
+            valid = false;
+        } else { $('#viga5').hide(); }
+
+        // 6. Select
+        if($('#muusikaliik').val() === ""){
+            $('#viga6').show();
+            valid = false;
+        } else { $('#viga6').hide(); }
+
+        // kui on vead, siis ei ole vaja vormi saada
+        if(!valid){
+            event.preventDefault();
+        } else {
+            alert("Vorm on edukalt saadetud!");
+        }
+    });
+});
+</script>
 
 <body>
 <h1>Muusika Küsimustik</h1>
-<form action="#">
+<form action="#" id="muusikaVorm">
 
     <table border="1">
         <tr>
@@ -18,6 +74,7 @@
             </td>
             <td>
                 <div id="vastus">0 tundi</div>
+                <span class="viga"id="viga3">vali 0-24t</span>
             </td>
         </tr>
 
@@ -42,6 +99,7 @@
             <td width="250">
                 <div id="vastus2"></div>
                 <img src="../pildid/tyhi.png" id="pilt2" alt="Muusik" width="120" style="display: none;">
+                <span class="viga" id="viga2">Palun vali vähemalt üks muusik</span>
             </td>
         </tr>
 
@@ -103,7 +161,7 @@
 
         <tr>
             <td>
-                <input type="reset" value="Puhasta" onclick="puhasta()">
+                <input type="reset" value="Puhasta" id="puhasta" onclick="puhasta()">
             </td>
             <td>
                 <input type="button" value="Näita andmed" onclick="tervitus()">

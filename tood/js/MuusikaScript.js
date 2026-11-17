@@ -42,7 +42,6 @@ function muusikValik(){
         pilt2.style.display="none";
     }
     else{
-        muusik="Palun vali muusik";
         pilt2.style.display="none";
     }
     vastus2.innerHTML="Valitud muusik on " + muusik;
@@ -77,7 +76,6 @@ function raadioValik(){
         pilt1.style.display="inline";
     }
     else{
-        raadio="Palun vali vastus";
         pilt1.style.display="none";
     }
     vastusRaadio.innerHTML="Raadio kuulamine: " + raadio;
