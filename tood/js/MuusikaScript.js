@@ -16,6 +16,7 @@ function muusikValik(){
     let muu=document.getElementById("muu");
     let pilt2=document.getElementById("pilt2");
 
+
     let muusik="";
     if(eeva.checked){
         muusik=eeva.value;
@@ -98,20 +99,19 @@ function MuusikaStiiliValik(){
     let Classic=document.getElementById("Classic");
     let Pop=document.getElementById("Pop");
 
-    let stiil="";
+    let stiil = "";
     if(Rock.checked){
-        stiil+=Rock.value + ", ";
+        stiil += Rock.value + ", ";
     }
     if(Classic.checked){
-        stiil+=Classic.value + ", ";
+        stiil += Classic.value + ", ";
     }
     if(Pop.checked){
-        stiil+=Pop.value + ", ";
+        stiil += Pop.value + ", ";
     }
-    if(stiil==""){
-        stiil="sa ei kuula muusikat";
+    if(stiil == ""){
     }
-    vastus3.innerHTML=stiil;
+    vastus3.innerHTML = stiil;
 
     return stiil;
 }
@@ -125,6 +125,22 @@ function tervitus(){
     let jaamad=jaamadLugemine();
     let stiil=MuusikaStiiliValik();
 
+    if(muusik == ""){
+        muusik = "Palun vali muusik";
+    }
+    if(arvamus == ""){
+        arvamus = "Palun kirjuta oma arvamus";
+    }
+    if(raadio == ""){
+        raadio = "Palun vali Jah või Ei";
+    }
+    if(jaamad == ""){
+        jaamad = "Palun nimeta raadiojaam";
+    }
+    if(stiil == ""){
+        stiil = "Palun vali stiil";
+    }
+
     koondvastus.innerHTML='Kuulad muusikat '+tund+' tundi päevas'+'<br>'
         +'Valitud muusik: '+muusik+'<br>'
         +'Arvamus: '+arvamus+'<br>'
@@ -135,13 +151,13 @@ function tervitus(){
     koondvastus.style.backgroundColor="yellow";
 }
 
-function puhasta(){
+function puhastaKoik(){
     document.getElementById("vastus").innerHTML="0 tundi";
-    document.getElementById("vastus2").innerHTML="";
-    document.getElementById("vastusArvamus").innerHTML="";
-    document.getElementById("vastusRaadio").innerHTML="";
-    document.getElementById("vastusJaamad").innerHTML="";
-    document.getElementById("vastus3").innerHTML="";
+    document.getElementById("vastus2").innerHTML="Valitud muusik on";
+    document.getElementById("vastusArvamus").innerHTML="Sinu arvamus:";
+    document.getElementById("vastusRaadio").innerHTML="Raadio kuulamine:";
+    document.getElementById("vastusJaamad").innerHTML="Sinu raadiojaamad:";
+    document.getElementById("vastus3").innerHTML="Valitud muusika on";
     document.getElementById("koondvastus").innerHTML="";
     document.getElementById("koondvastus").style.backgroundColor="";
     document.getElementById("pilt1").style.display="none";

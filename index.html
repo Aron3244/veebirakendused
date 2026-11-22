@@ -13,7 +13,6 @@
             crossorigin="anonymous"></script>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $("#p1").hover(function(){
@@ -80,6 +79,7 @@
             $('#osa1').bind("drag", koordiLugemine);
             $('#osa2').draggable();
             $('#osa2').bind("drag", koordiLugemine);
+
         }
 
 
@@ -124,13 +124,13 @@
         <p>Palun kasuta navigeerimismenüüd, et leida info!</p>
 
     </section>
-    </div>
+
     <input type="button" value="paremale"  id="paremale">
     <input type="button" value="vasakule" id="vasakule">
     <input type="button" value="peida tekst" onclick="$('#osa1').hide(2000)">
     <input type="button" value="kuva tekst" onclick="$('#osa1').show(2000, alert('Kohe kuvab tekst'))">
     <div id="koordinadid"></div>
-    </div>
+
 
     <section id="osa2">
         <h2>Ise tehtud pilt</h2>
@@ -145,6 +145,7 @@
         <p id="p1">Aron Tuur</p>
     </div>
 </footer>
+
 
 </body>
 </html>
