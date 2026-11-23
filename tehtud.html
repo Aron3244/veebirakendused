@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <title>Veebirakenduste tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://jquery.com"></script>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $('nav a').hover(function(event){
+                    $(this).addClass('hover');
+                },
+                function(){
+                    $(this).removeClass('hover');
+                });
+        });
+    </script>
 </head>
 <body>
 <!--veebilehe sisu, mis kasutaja näeb-->
@@ -16,7 +30,7 @@
 </header>
 <!--navigeerimismenüü-->
 <nav>
-    <ul>
+    <ul id="menyy">
         <li>
             <a href="index.html">Avaleht</a>
         </li>
@@ -25,6 +39,16 @@
         </li>
         <li>
             <a href="tehtud.html">Tehtud tööd</a>
+            <ul>
+                <li><a href="http://eportfoolio6.wordpress.com">1.kursuse WordPress</a></li>
+                <li><a href="kujundus2/index.html">Leht teise kujundusega</a></li>
+                <li><a href="tood/tabelid.html">Tabelid</a></li>
+                <li><a href="tood/maparea/map.html">Map area pildikaardid</a></li>
+                <li><a href="tood/vormid/ankeet.html">Ankeet | HTML vormid</a></li>
+                <li><a href="tood/pildid/piltideVahetus.html">Juhuslik pilt</a></li>
+                <li><a href="tood/vormid/MuusikaKusimustik.html">Muusikaküsimustik</a></li>
+                <li><a href="tood/canvas/joonistamine.html">Joonistamine</a></li>
+            </ul>
         </li>
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
@@ -38,7 +62,6 @@
         <li>
             <a href="tood/vormid/ankeet.html"> Ankeet | HTML vormid</a>
         </li>
-
     </ul>
 </nav>
 <!--sisu-->
@@ -64,20 +87,20 @@
         </div>
         <br>
     </section>
-<section>
-    <h2>Webstorm Github'iga sidumine</h2>
-    git clone https://github.com/Aron3244/veebirakendused.git https link
-    <br>
-    <strong>terminal, ja kirjutme jargmised käsud:</strong>
-    <br>
-    git status
-    <br>
-    git add .
-    <br>
-    git commit -a -m "tegevus mis oli failis"
-    <br>
-    git push
-</section>
+    <section>
+        <h2>Webstorm Github'iga sidumine</h2>
+        git clone https://github.com/Aron3244/veebirakendused.git https link
+        <br>
+        <strong>terminal, ja kirjutme jargmised käsud:</strong>
+        <br>
+        git status
+        <br>
+        git add .
+        <br>
+        git commit -a -m "tegevus mis oli failis"
+        <br>
+        git push
+    </section>
 
 </main>
 <footer>

@@ -116,4 +116,29 @@ section#muusika{
 section#kaart{
     border: 3px solid blue;
     padding: 5%;
+}  nav ul {
+       width: 200px;
+   }
+nav ul li ul {
+    list-style-type: none;
+    width: 200px;
+}
+nav a {
+    display: inline;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    background: #099;
+    color: #fff;
+    padding: 0.3em;
+}
+nav li {
+    display: inline;
+}
+.hover {
+    background: #3C9;
+    font-weight: 700;
+}
+#menyy{
+   display:inline;
+
 }
