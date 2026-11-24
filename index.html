@@ -12,6 +12,35 @@
             integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
             crossorigin="anonymous"></script>
 
+    <script type="text/javascript">
+        $(function() {
+            $('.vihjemull').mouseover(function(e) {
+
+            }).mousemove(function(e) {
+
+            }).mouseout(function() {
+
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('.vihjemull').mouseover(function(e) {
+                var mull = $(this).attr('title');
+                $(this).attr('title','');
+                $(this).append('<div id="vihje">' + mull + '</div>');
+                $('#vihje').fadeIn('500');
+                $('#vihje').fadeTo('10',0.9);
+            }).mousemove(function(e) {
+                $('#vihje').css('top', e.pageY + 10 );
+                $('#vihje').css('left', e.pageX + 20 );
+            }).mouseout(function() {
+                $(this).attr('title',$('#vihje').html());
+                $(this).children('div#vihje').remove();
+            });
+        });
+    </script>
 
     <script>
         $(document).ready(function(){
@@ -85,6 +114,7 @@
 
     </script>
 
+
     <link rel="stylesheet" href="style.css">
     <script src="tood/js/kpjakellaajaKuvamine.js"></script>
 </head>
@@ -100,10 +130,10 @@
 <nav>
     <ul>
         <li>
-            <a href="index.html">Avaleht</a>
+            <a href="index.html" >Avaleht</a>
         </li>
         <li>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="kontakt.html" class="vihjemull"  title="ddd">Kontakt</a>
         </li>
         <li>
             <a href="tehtud.html">Tehtud tööd</a>
@@ -134,7 +164,7 @@
 
     <section id="osa2">
         <h2>Ise tehtud pilt</h2>
-        <img src="Star.png" alt="Star" id="erapilt">
+        <div class=""><img src="Star.png" alt="Star" id="erapilt"></div>
         <input type="button" value="TÄNA ON" onclick="tanaOn()">
         <div id="vastus"></div>
     </section>
@@ -145,7 +175,6 @@
         <p id="p1">Aron Tuur</p>
     </div>
 </footer>
-
 
 </body>
 </html>

@@ -84,8 +84,8 @@ nav ul li a{
     text-decoration: none; /*link on alajooneta*/
     text-align: center; /*teksti joondamine keskel*/
     padding: 10px;
-    border-left: 3px solid blue;
-    border-right: 3px solid blue;
+    border-left: 3px solid #ff5900;
+    border-right: 3px solid #ff5900;
     border-radius: 20%;
 }
 nav{
@@ -116,23 +116,25 @@ section#muusika{
 section#kaart{
     border: 3px solid blue;
     padding: 5%;
-}  nav ul {
-       width: 200px;
-   }
+} nav ul {
+      margin: 0;
+      padding: 0;
+
+  }
 nav ul li ul {
     list-style-type: none;
     width: 200px;
 }
 nav a {
-    display: inline;
+    display: inline-block;
     border-bottom: 1px solid #fff;
     text-decoration: none;
-    background: #099;
+    background: #990075;
     color: #fff;
     padding: 0.3em;
 }
 nav li {
-    display: inline;
+    display: inline-block;
 }
 .hover {
     background: #3C9;
@@ -141,4 +143,21 @@ nav li {
 #menyy{
    display:inline;
 
+}
+
+{
+    font-family:arial;
+    font-size:12px;
+}
+a {
+    text-decoration:none;
+}
+/* vihjemull */
+#vihje {
+    position:absolute;
+    z-index:9999;
+    color: #80f35a;
+    font-size:17px;
+    background-color: rgb(15, 65, 237);
+    padding:5px 25px;
 }
